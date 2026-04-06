@@ -27,8 +27,29 @@ Zorvyn is a high-end financial dashboard designed with an architectural aestheti
 - **State Management**: React Context API
 
 ## Setup Instructions
-1. The application is pre-configured to run in the AI Studio environment.
-2. Dependencies are managed via `package.json`.
-3. The development server runs on port 3000.
-4. Use the sidebar to navigate between the Portfolio and Ledger views.
-5. Use the role toggle in the sidebar to switch between Viewer and Admin modes.
+
+1. **Clone the repository:**
+   ```bash
+   git clone <repository-url>
+   ```
+
+2. **Navigate to the project directory:**
+   ```bash
+   cd zorvyn
+   ```
+
+3. **Install dependencies:**
+   ```bash
+   npm install
+   ```
+
+4. **Start the development server:**
+   ```bash
+   npm run dev
+   ```
+
+> [!NOTE]
+> The `npm run dev` script is configured to automatically run both the React/Vite development server (port 3000) and the JSON-Server mock backend API (port 5000) simultaneously. Open [http://localhost:3000](http://localhost:3000) to view the application.
+
+5. Use the sidebar to navigate between different views (Portfolio, Ledger, Analytics, Vault, Settings).
+6. Use the role toggle in the sidebar to switch between Viewer and Admin modes.

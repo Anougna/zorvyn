@@ -1,10 +1,10 @@
 import React from 'react';
-import { 
-  LayoutDashboard, 
-  History, 
-  PieChart, 
-  Lock, 
-  Settings, 
+import {
+  LayoutDashboard,
+  History,
+  PieChart,
+  Lock,
+  Settings,
   ShieldCheck,
   Eye,
   LogOut
@@ -24,8 +24,8 @@ const SidebarItem: React.FC<SidebarItemProps> = ({ icon: Icon, label, active, on
     onClick={onClick}
     className={cn(
       "w-full flex items-center gap-4 py-3 px-8 transition-all duration-200 group",
-      active 
-        ? "bg-primary-container text-on-background border-l-4 border-primary" 
+      active
+        ? "bg-primary-container text-on-background border-l-4 border-primary"
         : "text-outline hover:text-on-surface hover:bg-surface-container-low"
     )}
   >
@@ -47,34 +47,34 @@ export const Sidebar: React.FC<{ activeTab: string; setActiveTab: (tab: string) 
       </div>
 
       <nav className="flex-1 space-y-1">
-        <SidebarItem 
-          icon={LayoutDashboard} 
-          label="Portfolio" 
-          active={activeTab === 'portfolio'} 
+        <SidebarItem
+          icon={LayoutDashboard}
+          label="Portfolio"
+          active={activeTab === 'portfolio'}
           onClick={() => setActiveTab('portfolio')}
         />
-        <SidebarItem 
-          icon={PieChart} 
-          label="Analytics" 
-          active={activeTab === 'analytics'} 
+        <SidebarItem
+          icon={PieChart}
+          label="Analytics"
+          active={activeTab === 'analytics'}
           onClick={() => setActiveTab('analytics')}
         />
-        <SidebarItem 
-          icon={History} 
-          label="Ledger" 
-          active={activeTab === 'ledger'} 
+        <SidebarItem
+          icon={History}
+          label="Ledger"
+          active={activeTab === 'ledger'}
           onClick={() => setActiveTab('ledger')}
         />
-        <SidebarItem 
-          icon={Lock} 
-          label="Vault" 
-          active={activeTab === 'vault'} 
+        <SidebarItem
+          icon={Lock}
+          label="Vault"
+          active={activeTab === 'vault'}
           onClick={() => setActiveTab('vault')}
         />
-        <SidebarItem 
-          icon={Settings} 
-          label="Settings" 
-          active={activeTab === 'settings'} 
+        <SidebarItem
+          icon={Settings}
+          label="Settings"
+          active={activeTab === 'settings'}
           onClick={() => setActiveTab('settings')}
         />
       </nav>
@@ -116,15 +116,15 @@ export const Sidebar: React.FC<{ activeTab: string; setActiveTab: (tab: string) 
           )}
         >
           <div className="w-8 h-8 rounded-full bg-surface-container-high flex items-center justify-center overflow-hidden grayscale hover:grayscale-0 transition-all">
-             <img 
-              src="https://picsum.photos/seed/vault/100/100" 
-              alt="User" 
+            <img
+              src="https://picsum.photos/seed/vault/100/100"
+              alt="User"
               className="w-full h-full object-cover"
               referrerPolicy="no-referrer"
             />
           </div>
           <div className="overflow-hidden text-left">
-            <p className="text-xs font-bold text-on-surface truncate uppercase">Alexander Vault</p>
+            <p className="text-xs font-bold text-on-surface truncate uppercase">Anougna Routu</p>
             <p className="text-[10px] text-outline uppercase tracking-wider">Principal</p>
           </div>
         </button>

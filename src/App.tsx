@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { FinanceProvider, useFinance } from './context/FinanceContext';
 import { getCurrencySymbol, formatCurrency } from './lib/utils';
 import { fetchPortfolioSummary, PortfolioSummaryData } from './api/endpoints';
+import { CURRENCY_CONFIG } from './types';
 import { Sidebar } from './components/Sidebar';
 import { TopBar } from './components/TopBar';
 import { SummaryCards } from './components/SummaryCards';
@@ -63,7 +64,7 @@ const DashboardContent: React.FC = () => {
                       <div className="h-24 w-96 bg-surface-container-low animate-pulse rounded" />
                     ) : (
                       <h2 className="text-7xl lg:text-8xl font-bold text-on-surface tracking-tighter leading-none mb-2">
-                        {getCurrencySymbol(currency)}{portfolioSummary ? new Intl.NumberFormat('en-US', { minimumFractionDigits: 2 }).format(portfolioSummary.totalBalance).replace(/^/, '').split('.')[0] : '0'}.<span className="text-outline text-4xl">{portfolioSummary ? new Intl.NumberFormat('en-US', { minimumFractionDigits: 2 }).format(portfolioSummary.totalBalance).split('.')[1] || '00' : '00'}</span>
+                        {getCurrencySymbol(currency)}{portfolioSummary ? new Intl.NumberFormat(CURRENCY_CONFIG[currency].locale, { minimumFractionDigits: 2 }).format(portfolioSummary.totalBalance).replace(/^/, '').split('.')[0] : '0'}.<span className="text-outline text-4xl">{portfolioSummary ? new Intl.NumberFormat(CURRENCY_CONFIG[currency].locale, { minimumFractionDigits: 2 }).format(portfolioSummary.totalBalance).split('.')[1] || '00' : '00'}</span>
                       </h2>
                     )}
                     <div className="absolute -bottom-4 left-0 w-full h-24 opacity-20 pointer-events-none overflow-hidden">

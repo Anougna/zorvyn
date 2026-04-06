@@ -6,7 +6,7 @@
 
 import type { Transaction } from '../types';
 
-const API_BASE_URL = 'http://localhost:5000';
+const API_BASE_URL = import.meta.env.PROD ? '/api' : 'http://localhost:5000';
 
 // ─── Transactions API ──────────────────────────────────────────────
 
