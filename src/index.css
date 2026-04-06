@@ -1,0 +1,209 @@
+@import "tailwindcss";
+
+/* ─── Light / Dark Design Tokens ─── */
+:root {
+  --sc-background: #f4f6f7;
+  --sc-surface: #ffffff;
+  --sc-surface-dim: #dce2e3;
+  --sc-surface-bright: #f4f6f7;
+  --sc-surface-container-lowest: #ffffff;
+  --sc-surface-container-low: #eef2f3;
+  --sc-surface-container: #e8ecee;
+  --sc-surface-container-high: #e2e7e9;
+  --sc-surface-container-highest: #dce2e3;
+  --sc-surface-variant: #dae4e7;
+  --sc-on-surface: #161d1f;
+  --sc-on-surface-variant: #3d484b;
+  --sc-on-background: #161d1f;
+  --sc-outline: #6f797c;
+  --sc-outline-variant: #bec8cb;
+  --sc-primary: #1f6070;
+  --sc-on-primary: #ffffff;
+  --sc-primary-container: #c0e9f8;
+  --sc-on-primary-container: #234c58;
+  --sc-primary-fixed: #c0e9f8;
+  --sc-primary-fixed-dim: #a4cddb;
+  --sc-secondary: #4d5b63;
+  --sc-on-secondary: #ffffff;
+  --sc-secondary-container: #d0dee7;
+  --sc-on-secondary-container: #3c4950;
+  --sc-tertiary: #5e504a;
+  --sc-on-tertiary: #ffffff;
+  --sc-tertiary-container: #e4d3c9;
+  --sc-on-tertiary-container: #50443e;
+  --sc-error: #ba1a1a;
+  --sc-on-error: #ffffff;
+  --sc-error-container: #ffdad6;
+  --sc-on-error-container: #410002;
+  --sc-surface-tint: #1f6070;
+  --sc-inverse-surface: #2b3132;
+  --sc-inverse-on-surface: #ecf1f2;
+  --sc-inverse-primary: #a4cddb;
+  --sc-scrollbar-track: #eef2f3;
+  --sc-scrollbar-thumb: #cdd5d7;
+}
+
+.dark {
+  --sc-background: #0e1415;
+  --sc-surface: #0e1415;
+  --sc-surface-dim: #0e1415;
+  --sc-surface-bright: #343a3b;
+  --sc-surface-container-lowest: #090f10;
+  --sc-surface-container-low: #171d1e;
+  --sc-surface-container: #1b2122;
+  --sc-surface-container-high: #252b2c;
+  --sc-surface-container-highest: #303637;
+  --sc-surface-variant: #303637;
+  --sc-on-surface: #dee3e4;
+  --sc-on-surface-variant: #c1c8cb;
+  --sc-on-background: #dee3e4;
+  --sc-outline: #8b9295;
+  --sc-outline-variant: #41484b;
+  --sc-primary: #a4cddb;
+  --sc-on-primary: #053541;
+  --sc-primary-container: #234c58;
+  --sc-on-primary-container: #93bbc9;
+  --sc-primary-fixed: #c0e9f8;
+  --sc-primary-fixed-dim: #a4cddb;
+  --sc-secondary: #bbc8d1;
+  --sc-on-secondary: #263239;
+  --sc-secondary-container: #3c4950;
+  --sc-on-secondary-container: #aab7bf;
+  --sc-tertiary: #d4c3ba;
+  --sc-on-tertiary: #382e28;
+  --sc-tertiary-container: #50443e;
+  --sc-on-tertiary-container: #c2b2a9;
+  --sc-error: #ffb4ab;
+  --sc-on-error: #690005;
+  --sc-error-container: #93000a;
+  --sc-on-error-container: #ffdad6;
+  --sc-surface-tint: #a4cddb;
+  --sc-inverse-surface: #dee3e4;
+  --sc-inverse-on-surface: #2b3132;
+  --sc-inverse-primary: #3c6470;
+  --sc-scrollbar-track: #0e1415;
+  --sc-scrollbar-thumb: #252b2c;
+}
+
+@theme {
+  --color-background: var(--sc-background);
+  --color-surface: var(--sc-surface);
+  --color-surface-dim: var(--sc-surface-dim);
+  --color-surface-bright: var(--sc-surface-bright);
+  --color-surface-container-lowest: var(--sc-surface-container-lowest);
+  --color-surface-container-low: var(--sc-surface-container-low);
+  --color-surface-container: var(--sc-surface-container);
+  --color-surface-container-high: var(--sc-surface-container-high);
+  --color-surface-container-highest: var(--sc-surface-container-highest);
+  --color-surface-variant: var(--sc-surface-variant);
+  --color-on-surface: var(--sc-on-surface);
+  --color-on-surface-variant: var(--sc-on-surface-variant);
+  --color-on-background: var(--sc-on-background);
+  --color-outline: var(--sc-outline);
+  --color-outline-variant: var(--sc-outline-variant);
+  --color-primary: var(--sc-primary);
+  --color-on-primary: var(--sc-on-primary);
+  --color-primary-container: var(--sc-primary-container);
+  --color-on-primary-container: var(--sc-on-primary-container);
+  --color-primary-fixed: var(--sc-primary-fixed);
+  --color-primary-fixed-dim: var(--sc-primary-fixed-dim);
+  --color-secondary: var(--sc-secondary);
+  --color-on-secondary: var(--sc-on-secondary);
+  --color-secondary-container: var(--sc-secondary-container);
+  --color-on-secondary-container: var(--sc-on-secondary-container);
+  --color-tertiary: var(--sc-tertiary);
+  --color-on-tertiary: var(--sc-on-tertiary);
+  --color-tertiary-container: var(--sc-tertiary-container);
+  --color-on-tertiary-container: var(--sc-on-tertiary-container);
+  --color-error: var(--sc-error);
+  --color-on-error: var(--sc-on-error);
+  --color-error-container: var(--sc-error-container);
+  --color-on-error-container: var(--sc-on-error-container);
+  --color-surface-tint: var(--sc-surface-tint);
+  --color-inverse-surface: var(--sc-inverse-surface);
+  --color-inverse-on-surface: var(--sc-inverse-on-surface);
+  --color-inverse-primary: var(--sc-inverse-primary);
+
+  --font-headline: "Manrope", sans-serif;
+  --font-body: "Manrope", sans-serif;
+  --font-label: "Manrope", sans-serif;
+  --font-mono: "JetBrains Mono", monospace;
+}
+
+@layer base {
+  body {
+    @apply bg-background text-on-surface font-body antialiased;
+    transition: background-color 0.4s ease, color 0.4s ease;
+  }
+}
+
+/* Grain texture overlay for premium feel */
+.matte-grain {
+  position: relative;
+}
+
+.matte-grain::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+  opacity: 0.02;
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 4px;
+}
+::-webkit-scrollbar-track {
+  background: var(--sc-scrollbar-track);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--sc-scrollbar-thumb);
+  border-radius: 2px;
+}
+
+/* Smooth theme transition for key elements */
+*,
+*::before,
+*::after {
+  transition-property: background-color, border-color, box-shadow;
+  transition-duration: 0.25s;
+  transition-timing-function: ease;
+}
+/* Exclude animations from theme transitions */
+[class*="animate"],
+[class*="motion"] {
+  transition-property: none;
+}
+
+/* Chart tooltip theme adaptation */
+.recharts-default-tooltip {
+  transition: background-color 0.25s ease, border-color 0.25s ease;
+}
+
+/* Shimmer animation for loading states */
+@keyframes shimmer {
+  0% { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
+.shimmer {
+  background: linear-gradient(90deg, transparent 0%, var(--sc-surface-container-high) 50%, transparent 100%);
+  background-size: 200% 100%;
+  animation: shimmer 2s infinite;
+}
+
+/* Pulse ring for status indicators */
+@keyframes pulse-ring {
+  0% { transform: scale(0.8); opacity: 1; }
+  100% { transform: scale(2); opacity: 0; }
+}
+.pulse-ring::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 9999px;
+  border: 2px solid currentColor;
+  animation: pulse-ring 1.5s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
